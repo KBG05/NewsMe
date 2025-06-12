@@ -31,6 +31,7 @@ Each news article should be returned in the following **structured JSON format**
 
 Make sure:
 - Articles are selected from **diverse, credible sources** (limit one article per source, if possible).
+- Get news articles from ALL the above coverages.
 - Avoid duplicates or overly similar stories.
 - Language is neutral, factual, and easy to read.
 - return ONLY the json object in TEXT FORMAT and NOTHING else (NO EXTRA TEXT/POINTS).
