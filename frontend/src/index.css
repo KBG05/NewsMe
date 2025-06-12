@@ -1,0 +1,273 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: radial-gradient(ellipse at center, #0a0a18 0%, #16213e 25%, #1a1a2e 50%, #0f0f23 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+}
+
+/* Enhanced animated background elements */
+.space-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.4), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(16, 185, 129, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(139, 92, 246, 0.4), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(59, 130, 246, 0.3), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(16, 185, 129, 0.2), transparent),
+    radial-gradient(3px 3px at 200px 50px, rgba(59, 130, 246, 0.2), transparent),
+    radial-gradient(1px 1px at 250px 100px, rgba(139, 92, 246, 0.3), transparent);
+  background-size: 300px 150px;
+  animation: float 25s ease-in-out infinite, drift 30s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Shooting stars and horizontal lines */
+.lines-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.lines-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, transparent 20%, transparent 80%, rgba(59, 130, 246, 0.3) 100%),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.2) 0%, transparent 30%, transparent 70%, rgba(16, 185, 129, 0.2) 100%),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.25) 0%, transparent 25%, transparent 75%, rgba(139, 92, 246, 0.25) 100%);
+  background-size: 200px 1px, 150px 1px, 180px 1px;
+  background-position: 0 20%, 0 45%, 0 70%;
+  background-repeat: repeat-x;
+  animation: horizontal-drift 15s linear infinite, pulse-lines 3s ease-in-out infinite;
+}
+
+.lines-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse 100px 2px at 10% 20%, rgba(59, 130, 246, 0.8), transparent),
+    radial-gradient(ellipse 80px 1px at 80% 40%, rgba(16, 185, 129, 0.6), transparent),
+    radial-gradient(ellipse 120px 2px at 30% 70%, rgba(139, 92, 246, 0.7), transparent),
+    radial-gradient(ellipse 60px 1px at 90% 10%, rgba(59, 130, 246, 0.5), transparent),
+    radial-gradient(ellipse 90px 1px at 60% 90%, rgba(16, 185, 129, 0.4), transparent);
+  animation: shooting-stars 20s linear infinite;
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(-0.5deg); }
+  75% { transform: translateY(-20px) rotate(1.5deg); }
+}
+
+@keyframes drift {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(-50px); }
+}
+
+@keyframes horizontal-drift {
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(100px); }
+}
+
+@keyframes pulse-lines {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes shooting-stars {
+  0% { transform: translateX(-200%) rotate(0deg); }
+  100% { transform: translateX(200%) rotate(360deg); }
+}
+
+@keyframes scroll-loop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation utilities */
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-scroll-loop {
+  animation: scroll-loop 30s linear infinite;
+}
+
+/* Enhanced dual color text */
+.dual-text {
+  background: linear-gradient(45deg, #3b82f6 30%, #ffffff 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Enhanced glassmorphism effect */
+.glass-card {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Topic badge styles */
+.topic-badge {
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.topic-badge:hover {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: rgba(59, 130, 246, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
+}
+
+/* Scroll triggered animations */
+.scroll-trigger {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-trigger.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
