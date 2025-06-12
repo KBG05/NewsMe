@@ -82,7 +82,7 @@ def run_migrations_online() -> None:
     print(f"DEBUG: Attempting to create engine for online migration with URL: {url_for_engine}")
 
     connectable = create_engine(
-        url_for_engine,
+        url_for_engine, #type:ignore
         poolclass=pool.NullPool
     )
 
