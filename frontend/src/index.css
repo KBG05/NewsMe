@@ -7,41 +7,33 @@
 
 @layer base {
   :root {
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 199 89% 48%;
   }
 }
 
@@ -52,10 +44,11 @@
 
   body {
     @apply bg-background text-foreground;
-    background: radial-gradient(ellipse at center, #0a0a18 0%, #16213e 25%, #1a1a2e 50%, #0f0f23 100%);
+    background: radial-gradient(ellipse at center, #0a0a0f 0%, #0f1419 25%, #111827 50%, #0a0a0f 100%);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
 
@@ -67,14 +60,14 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.4), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(16, 185, 129, 0.3), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(139, 92, 246, 0.4), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(59, 130, 246, 0.3), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(16, 185, 129, 0.2), transparent),
-    radial-gradient(3px 3px at 200px 50px, rgba(59, 130, 246, 0.2), transparent),
-    radial-gradient(1px 1px at 250px 100px, rgba(139, 92, 246, 0.3), transparent);
-  background-size: 300px 150px;
+    radial-gradient(1px 1px at 20px 30px, rgba(0, 191, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 40px 70px, rgba(0, 191, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(0, 191, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(0, 191, 255, 0.2), transparent),
+    radial-gradient(1px 1px at 160px 30px, rgba(0, 191, 255, 0.1), transparent),
+    radial-gradient(2px 2px at 200px 50px, rgba(0, 191, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 250px 100px, rgba(0, 191, 255, 0.2), transparent);
+  background-size: 400px 200px;
   animation: float 25s ease-in-out infinite, drift 30s linear infinite;
   pointer-events: none;
   z-index: -1;
@@ -99,13 +92,13 @@
   width: 100%;
   height: 100%;
   background: 
-    linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, transparent 20%, transparent 80%, rgba(59, 130, 246, 0.3) 100%),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.2) 0%, transparent 30%, transparent 70%, rgba(16, 185, 129, 0.2) 100%),
-    linear-gradient(90deg, rgba(139, 92, 246, 0.25) 0%, transparent 25%, transparent 75%, rgba(139, 92, 246, 0.25) 100%);
-  background-size: 200px 1px, 150px 1px, 180px 1px;
-  background-position: 0 20%, 0 45%, 0 70%;
+    linear-gradient(90deg, rgba(0, 191, 255, 0.4) 0%, transparent 15%, transparent 85%, rgba(0, 191, 255, 0.4) 100%),
+    linear-gradient(90deg, rgba(0, 191, 255, 0.3) 0%, transparent 20%, transparent 80%, rgba(0, 191, 255, 0.3) 100%),
+    linear-gradient(90deg, rgba(0, 191, 255, 0.2) 0%, transparent 25%, transparent 75%, rgba(0, 191, 255, 0.2) 100%);
+  background-size: 80px 1px, 120px 1px, 150px 1px;
+  background-position: 0 15%, 0 35%, 0 55%, 0 75%;
   background-repeat: repeat-x;
-  animation: horizontal-drift 15s linear infinite, pulse-lines 3s ease-in-out infinite;
+  animation: horizontal-drift 12s linear infinite, pulse-lines 2s ease-in-out infinite;
 }
 
 .lines-bg::after {
@@ -116,40 +109,40 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(ellipse 100px 2px at 10% 20%, rgba(59, 130, 246, 0.8), transparent),
-    radial-gradient(ellipse 80px 1px at 80% 40%, rgba(16, 185, 129, 0.6), transparent),
-    radial-gradient(ellipse 120px 2px at 30% 70%, rgba(139, 92, 246, 0.7), transparent),
-    radial-gradient(ellipse 60px 1px at 90% 10%, rgba(59, 130, 246, 0.5), transparent),
-    radial-gradient(ellipse 90px 1px at 60% 90%, rgba(16, 185, 129, 0.4), transparent);
-  animation: shooting-stars 20s linear infinite;
+    radial-gradient(ellipse 60px 1px at 10% 20%, rgba(0, 191, 255, 0.8), transparent),
+    radial-gradient(ellipse 40px 1px at 80% 40%, rgba(0, 191, 255, 0.6), transparent),
+    radial-gradient(ellipse 80px 1px at 30% 70%, rgba(0, 191, 255, 0.7), transparent),
+    radial-gradient(ellipse 30px 1px at 90% 10%, rgba(0, 191, 255, 0.5), transparent),
+    radial-gradient(ellipse 50px 1px at 60% 90%, rgba(0, 191, 255, 0.4), transparent);
+  animation: shooting-stars 15s linear infinite;
 }
 
 /* Enhanced animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  25% { transform: translateY(-15px) rotate(1deg); }
-  50% { transform: translateY(-5px) rotate(-0.5deg); }
-  75% { transform: translateY(-20px) rotate(1.5deg); }
+  25% { transform: translateY(-10px) rotate(0.5deg); }
+  50% { transform: translateY(-3px) rotate(-0.3deg); }
+  75% { transform: translateY(-15px) rotate(0.8deg); }
 }
 
 @keyframes drift {
   0% { transform: translateX(0px); }
-  100% { transform: translateX(-50px); }
+  100% { transform: translateX(-30px); }
 }
 
 @keyframes horizontal-drift {
-  0% { transform: translateX(-100px); }
-  100% { transform: translateX(100px); }
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(200px); }
 }
 
 @keyframes pulse-lines {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.8; }
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
 }
 
 @keyframes shooting-stars {
-  0% { transform: translateX(-200%) rotate(0deg); }
-  100% { transform: translateX(200%) rotate(360deg); }
+  0% { transform: translateX(-300%) rotate(0deg); }
+  100% { transform: translateX(300%) rotate(360deg); }
 }
 
 @keyframes scroll-loop {
@@ -224,7 +217,7 @@
 
 /* Enhanced dual color text */
 .dual-text {
-  background: linear-gradient(45deg, #3b82f6 30%, #ffffff 70%);
+  background: linear-gradient(45deg, #00bfff 30%, #ffffff 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -239,25 +232,25 @@
 
 /* Enhanced glassmorphism effect */
 .glass-card {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(15, 23, 42, 0.4);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 191, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 /* Topic badge styles */
 .topic-badge {
-  background: rgba(59, 130, 246, 0.15);
-  border: 1px solid rgba(59, 130, 246, 0.4);
+  background: rgba(0, 191, 255, 0.1);
+  border: 1px solid rgba(0, 191, 255, 0.3);
   transition: all 0.3s ease;
   backdrop-filter: blur(8px);
 }
 
 .topic-badge:hover {
-  background: rgba(59, 130, 246, 0.25);
-  border-color: rgba(59, 130, 246, 0.6);
+  background: rgba(0, 191, 255, 0.2);
+  border-color: rgba(0, 191, 255, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 191, 255, 0.2);
 }
 
 /* Scroll triggered animations */

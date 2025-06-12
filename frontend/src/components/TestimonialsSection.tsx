@@ -27,18 +27,18 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-12 px-6">
+    <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12 scroll-trigger">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 dual-text">
-            Loved by thousands
+        <div className="text-center mb-16 scroll-trigger">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Join the community of professionals who rely on News Me for their daily insights
+            Join the professionals who rely on NewsMe for strategic insights
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -70,23 +70,27 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
+        {/* Stats Section - Updated with new data */}
         <div className="grid md:grid-cols-4 gap-8 scroll-trigger">
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">50K+</div>
-            <div className="text-gray-400">Active Users</div>
+            <div className="text-6xl font-bold text-primary mb-2">300K+</div>
+            <div className="text-lg font-semibold text-white mb-1">Daily Readers</div>
+            <div className="text-gray-400 text-sm">Professionals trust NewsMe</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">1M+</div>
-            <div className="text-gray-400">Articles Curated</div>
+            <div className="text-6xl font-bold text-primary mb-2">200+</div>
+            <div className="text-lg font-semibold text-white mb-1">Global Sources</div>
+            <div className="text-gray-400 text-sm">Comprehensive coverage</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">95%</div>
-            <div className="text-gray-400">Satisfaction Rate</div>
+            <div className="text-6xl font-bold text-primary mb-2">95%</div>
+            <div className="text-lg font-semibold text-white mb-1">Time Saved</div>
+            <div className="text-gray-400 text-sm">Compared to traditional news</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-            <div className="text-gray-400">Real-time Updates</div>
+            <div className="text-6xl font-bold text-primary mb-2">5 min</div>
+            <div className="text-lg font-semibold text-white mb-1">Daily Read</div>
+            <div className="text-gray-400 text-sm">Perfect for busy schedules</div>
           </div>
         </div>
       </div>
