@@ -1,0 +1,2 @@
+id : newsme.weekly@gmail.com
+pass : Newsme@123

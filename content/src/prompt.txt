@@ -34,4 +34,4 @@ Make sure:
 - Get news articles from ALL the above coverages.
 - Avoid duplicates or overly similar stories.
 - Language is neutral, factual, and easy to read.
-- return ONLY the json object in TEXT FORMAT and NOTHING else (NO EXTRA TEXT/POINTS).
+- return ONLY the json object and NOTHING else (NO EXTRA TEXT/POINTS).
