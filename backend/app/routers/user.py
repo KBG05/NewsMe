@@ -23,7 +23,7 @@ def create_user(request:Request, user:Annotated[UserCreate, Body(embed=False)], 
     try:
         existing=get_user(user.email, session=session)
         if existing:
-            return UserResponseMessage(msg="user already exists")
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="user already registered")
         print(user.keywords)
         response=supabase.auth.sign_in_with_otp({
             "email":user.email,
@@ -41,8 +41,7 @@ def create_user(request:Request, user:Annotated[UserCreate, Body(embed=False)], 
         if response.user==None or (not existing)  :
             return UserResponseMessage(msg="Magic Link Sent Successfully")
         else:
-            # raise HTTPException(status_code=response.status, detail="user already registered")
-            return UserResponseMessage(msg="User already exists")
+            raise HTTPException(status_code=response.status, detail="user already registered")
         
     except ValidationError as e:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
