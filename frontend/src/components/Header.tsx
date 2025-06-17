@@ -3,7 +3,7 @@ import { Brain } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 p-6">
+    <header className="fixed top-0 left-0 right-0 z-50 p-6 ">
       <div className="flex items-center justify-start">
         <div className="flex items-center space-x-3 glass-card rounded-2xl px-4 py-2">
           <div className="w-8 h-8 bg-gradient-to-br from-[#CBE491] to-[#CBE491]/60 rounded-lg flex items-center justify-center relative overflow-hidden">

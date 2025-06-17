@@ -110,10 +110,10 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-15">
+    <section className="min-h-screen flex flex-col items-center justify-center pt-20 sm:px-5 ">
       <div className="text-center max-w-4xl mx-auto scroll-trigger">
         {/* Logo */}
-        <div className="mb-0 animate-scale-in">
+        <div className="mb-0 animate-scale-in ">
           <div className="w-24 h-24 bg-gradient-to-br from-[#CBE491] animate-pulse ] to-[#CBE491]/60 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-[#CBE491]/30 relative overflow-hidden border-2 border-[#CBE491]/20">
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
             <Brain className="w-12 h-12 text-[#0f140a] relative z-10 " />
@@ -174,9 +174,9 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
 
         {/* Step 1: Personal Info */}
         {currentStep === 1 && (
-          <div className="max-w-2xl mx-auto animate-fade-up">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Tell us about yourself</h2>
-            <p className="text-muted-foreground mb-8">Personalize your AI newsletter experience</p>
+          <div className="max-w-2xl  mx-auto animate-fade-up">
+            {/* <h2 className="text-3xl font-bold text-foreground mb-4">Tell us about yourself</h2>
+            <p className="text-muted-foreground mb-8">Personalize your AI newsletter experience</p> */}
             
             <div className="space-y-6">
               <div className="text-left">
