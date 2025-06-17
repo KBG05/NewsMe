@@ -110,30 +110,31 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-15">
       <div className="text-center max-w-4xl mx-auto scroll-trigger">
         {/* Logo */}
-        <div className="mb-8 animate-scale-in">
-          <div className="w-24 h-24 bg-gradient-to-br from-[#CBE491] to-[#CBE491]/60 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-[#CBE491]/30 relative overflow-hidden border-2 border-[#CBE491]/20">
+        <div className="mb-0 animate-scale-in">
+          <div className="w-24 h-24 bg-gradient-to-br from-[#CBE491] animate-pulse ] to-[#CBE491]/60 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-[#CBE491]/30 relative overflow-hidden border-2 border-[#CBE491]/20">
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
-            <Brain className="w-12 h-12 text-[#0f140a] relative z-10" />
+            <Brain className="w-12 h-12 text-[#0f140a] relative z-10 " />
             <div className="absolute inset-0 animate-pulse bg-[#CBE491]/10 rounded-3xl"></div>
           </div>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-8xl md:text-9xl font-bold mb-6 animate-fade-up dual-text">
-          News Me
+        <h1 className="text-8xl md:text-9xl font-medium mb-14 animate-fade-up dual-text">
+          NewsMe
         </h1>
 
         {/* Tagline */}
         <div className="mb-12 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
-            Intelligence. <br />
-            <span className="font-normal">Simplified. With</span> <span className="text-[#CBE491]">NewsMe</span>
+          <h2 className="text-3xl md:text-2xl font-thin text-foreground mb-8">
+            News that matters, 
+            <span className="font-normal"> insights that inspires.</span> 
+            {/* <span className="text-[#CBE491]">NewsMe</span> */}
           </h2>
-          <p className="text-xl text-[#CBE491] font-medium mb-2">5 minutes daily.</p>
-          <p className="text-xl text-foreground">Infinite clarity.</p>
+          <p className="text-xl text-[#CBE491] font-thin mb-2">5 minutes weekly, Infinite clarity.</p>
+          <p className="text-xl text-foreground"></p>
         </div>
 
         {/* Progress Dots */}

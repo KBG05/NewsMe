@@ -4,25 +4,25 @@ import { Star, Quote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "Tech Journalist",
+      name: "Kushal B",
+      role: "Tech Enthusiast",
       content: "News Me has completely transformed how I stay updated with industry trends. The AI curation is incredibly accurate.",
       rating: 5,
-      avatar: "SC"
+      avatar: "KBG"
     },
     {
-      name: "Marcus Johnson",
-      role: "Startup Founder",
+      name: "Siddarth AY",
+      role: "Tech Guru",
       content: "I get exactly the news I need for my business decisions. No more information overload, just relevant insights.",
       rating: 5,
-      avatar: "MJ"
+      avatar: "SA"
     },
     {
-      name: "Elena Rodriguez",
-      role: "Data Scientist",
+      name: "Anish Kasetty",
+      role: "Student & Developer",
       content: "The personalization gets better every day. It's like having a personal news assistant that knows exactly what matters to me.",
       rating: 5,
-      avatar: "ER"
+      avatar: "AK"
     }
   ];
 
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
         {/* Stats Section - Updated with new data */}
         <div className="grid md:grid-cols-4 gap-8 scroll-trigger">
           <div className="text-center">
-            <div className="text-6xl font-bold text-[#CBE491] mb-2">300K+</div>
+            <div className="text-6xl font-bold text-[#CBE491] mb-2">10+</div>
             <div className="text-lg font-semibold text-white mb-1">Daily Readers</div>
             <div className="text-gray-400 text-sm">Professionals trust NewsMe</div>
           </div>

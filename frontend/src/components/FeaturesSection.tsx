@@ -1,10 +1,10 @@
 
-import { Zap, Shield, Globe } from "lucide-react";
+import { Zap, Shield, Cpu} from "lucide-react";
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center"><div className="w-6 h-6 bg-white rounded-full"></div></div>,
+      icon: <Cpu className="w-6 h-6"/>,
       title: 'AI-Powered',
       description: 'Advanced algorithms curate personalized content based on your interests and reading patterns.',
       color: 'bg-blue-500'
@@ -12,7 +12,7 @@ const FeaturesSection = () => {
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'Lightning Fast',
-      description: 'Get breaking news and trending topics delivered instantly to your inbox with real-time updates.',
+      description: 'Get weekly news and trending topics delivered instantly to your inbox with latest updates.',
       color: 'bg-purple-500'
     },
     {
@@ -24,8 +24,8 @@ const FeaturesSection = () => {
   ];
 
   const stats = [
-    { value: '10K+', label: 'Subscribers' },
-    { value: 'Daily', label: 'Updates' },
+    { value: '10+', label: 'Subscribers' },
+    { value: 'Weekly', label: 'Updates' },
     { value: '100%', label: 'Secure' }
   ];
 
@@ -33,7 +33,7 @@ const FeaturesSection = () => {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 scroll-trigger dual-text">
-          Why Choose News Me?
+          Why Choose NewsMe?
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8 mb-20">

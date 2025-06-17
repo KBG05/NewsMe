@@ -43,18 +43,18 @@ const Footer = () => {
     <footer className="py-16 px-6 border-t border-gray-800">
       <div className="max-w-6xl mx-auto text-center">
         {/* Main description */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Transforming global information into strategic intelligence for decision-makers who shape the future.
           </p>
-        </div>
+        </div> */}
 
-        {/* Navigation Links */}
+        {/* Navigation Links
         <div className="flex justify-center space-x-8 mb-8">
           <a href="#" className="text-gray-400 hover:text-primary transition-colors">About Us</a>
           <a href="#" className="text-gray-400 hover:text-primary transition-colors">Contact Us</a>
           <a href="#" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
-        </div>
+        </div> */}
 
         {/* Unsubscribe Section */}
         <div className="mb-8">
@@ -79,13 +79,12 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div className="space-y-2 mb-8 text-gray-400 text-sm">
-          <p>contact@newsme.ai</p>
-          <p>Enterprise: +1 (555) 123-4567</p>
+          <p></p>
         </div>
 
         {/* Copyright */}
         <div className="text-gray-500 text-sm">
-          <p>© 2024 NewsMe Intelligence Network. All rights reserved.</p>
+          <p>© 2025 NewsMe . All rights reserved.</p>
         </div>
       </div>
     </footer>
