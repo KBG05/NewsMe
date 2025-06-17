@@ -158,14 +158,14 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
                 placeholder="your@email.com"
                 value={formData.email}
                 onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                className="flex-1 bg-card border-border text-foreground placeholder-muted-foreground h-12 rounded-xl"
+                className="flex-1 bg-[#0d2818] border-[#1a4d2e] text-[#e6ffed] placeholder:text-[#888888]  h-12 rounded-xl"
               />
               <Button 
                 onClick={handleContinue}
                 disabled={!formData.email}
                 className="bg-[#CBE491] hover:bg-[#CBE491]/90 text-[#0f140a] px-6 h-12 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#CBE491]/30 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
               >
-                Continue
+                Get my Newsletter
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
@@ -186,7 +186,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
                   placeholder="John Doe"
                   value={formData.name}
                   onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                  className="bg-card border-border text-foreground h-12 rounded-xl"
+                  className="bg-[#0d2818] border-[#1a4d2e] text-[#e6ffed] placeholder:text-[#888888] h-12 rounded-xl"
                 />
               </div>
               
@@ -197,7 +197,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
                   placeholder="e.g., Technology, Finance, AI"
                   value={formData.topic}
                   onChange={(e) => setFormData(prev => ({ ...prev, topic: e.target.value }))}
-                  className="bg-card border-border text-foreground h-12 rounded-xl"
+                  className="bg-[#0d2818] border-[#1a4d2e] text-[#e6ffed] placeholder:text-[#888888] h-12 rounded-xl"
                 />
               </div>
               
@@ -206,7 +206,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
                 <Input
                   type="text"
                   placeholder="Add keywords (press Enter to add)"
-                  className="bg-card border-border text-foreground h-12 rounded-xl"
+                  className="bg-[#0d2818] border-[#1a4d2e] text-[#e6ffed] placeholder:text-[#888888] h-12 rounded-xl"
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {
                       const target = e.target as HTMLInputElement;
@@ -236,7 +236,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
               <Button 
                 variant="outline" 
                 onClick={handleStepBack}
-                className="flex-1 h-12 rounded-xl bg-card border-border text-foreground hover:bg-accent"
+                className="flex-1 h-12 rounded-xl bg-[#0d2818] border-[#1a4d2e] text-[#e6ffed] placeholder:text-[#888888] "
               >
                 <ArrowLeft className="mr-2 w-4 h-4" />
                 Back

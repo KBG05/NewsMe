@@ -74,7 +74,7 @@ const TestimonialsSection = () => {
         <div className="grid md:grid-cols-4 gap-8 scroll-trigger">
           <div className="text-center">
             <div className="text-6xl font-bold text-[#CBE491] mb-2">10+</div>
-            <div className="text-lg font-semibold text-white mb-1">Daily Readers</div>
+            <div className="text-lg font-semibold text-white mb-1">Weekly Readers</div>
             <div className="text-gray-400 text-sm">Professionals trust NewsMe</div>
           </div>
           <div className="text-center">
@@ -89,7 +89,7 @@ const TestimonialsSection = () => {
           </div>
           <div className="text-center">
             <div className="text-6xl font-bold text-[#CBE491] mb-2">5 min</div>
-            <div className="text-lg font-semibold text-white mb-1">Daily Read</div>
+            <div className="text-lg font-semibold text-white mb-1">Weekly Read</div>
             <div className="text-gray-400 text-sm">Perfect for busy schedules</div>
           </div>
         </div>
