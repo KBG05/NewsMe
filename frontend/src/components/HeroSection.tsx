@@ -2,13 +2,14 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, ArrowLeft, Zap, X } from "lucide-react";
+import { ArrowRight, ArrowLeft, Brain, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface HeroSectionProps {
   currentStep: number;
   setCurrentStep: (step: number) => void;
 }
+
 const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
   const [formData, setFormData] = useState({
     email: '',
@@ -16,7 +17,6 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
     topic: '',
     keywords: [] as string[]
   });
-  console.log(formData)
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [canResend, setCanResend] = useState(true);
   const [resendTimer, setResendTimer] = useState(0);
@@ -111,15 +111,13 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
-      {/* Additional Content at Top */}
-
       <div className="text-center max-w-4xl mx-auto scroll-trigger">
         {/* Logo */}
         <div className="mb-8 animate-scale-in">
-          <div className="w-24 h-24 bg-gradient-to-br from-primary to-primary/60 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-primary/30 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
-            <Zap className="w-12 h-12 text-white relative z-10" />
-            <div className="absolute inset-0 animate-pulse bg-primary/20 rounded-3xl"></div>
+          <div className="w-24 h-24 bg-gradient-to-br from-[#CBE491] to-[#CBE491]/60 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-[#CBE491]/30 relative overflow-hidden border-2 border-[#CBE491]/20">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+            <Brain className="w-12 h-12 text-[#0f140a] relative z-10" />
+            <div className="absolute inset-0 animate-pulse bg-[#CBE491]/10 rounded-3xl"></div>
           </div>
         </div>
 
@@ -130,12 +128,12 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
 
         {/* Tagline */}
         <div className="mb-12 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          <h2 className="text-3xl md:text-4xl font-light text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4">
             Intelligence. <br />
-            <span className="font-normal">Simplified. With</span> <span className="text-primary">NewsMe</span>
+            <span className="font-normal">Simplified. With</span> <span className="text-[#CBE491]">NewsMe</span>
           </h2>
-          <p className="text-xl text-primary font-medium mb-2">5 minutes daily.</p>
-          <p className="text-xl text-white">Infinite clarity.</p>
+          <p className="text-xl text-[#CBE491] font-medium mb-2">5 minutes daily.</p>
+          <p className="text-xl text-foreground">Infinite clarity.</p>
         </div>
 
         {/* Progress Dots */}
@@ -144,7 +142,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
             <div
               key={step}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                step === currentStep ? 'bg-primary' : step < currentStep ? 'bg-primary/60' : 'bg-gray-600'
+                step === currentStep ? 'bg-[#CBE491]' : step < currentStep ? 'bg-[#CBE491]/60' : 'bg-muted'
               }`}
             />
           ))}
@@ -159,12 +157,12 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
                 placeholder="your@email.com"
                 value={formData.email}
                 onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                className="flex-1 bg-gray-900/50 border-gray-700 text-white placeholder-gray-400 h-12 rounded-xl"
+                className="flex-1 bg-card border-border text-foreground placeholder-muted-foreground h-12 rounded-xl"
               />
               <Button 
                 onClick={handleContinue}
                 disabled={!formData.email}
-                className="bg-primary hover:bg-primary/90 text-white px-6 h-12 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-[#CBE491] hover:bg-[#CBE491]/90 text-[#0f140a] px-6 h-12 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#CBE491]/30 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
               >
                 Continue
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -176,38 +174,38 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
         {/* Step 1: Personal Info */}
         {currentStep === 1 && (
           <div className="max-w-2xl mx-auto animate-fade-up">
-            <h2 className="text-3xl font-bold text-white mb-4">Tell us about yourself</h2>
-            <p className="text-gray-400 mb-8">Personalize your AI newsletter experience</p>
+            <h2 className="text-3xl font-bold text-foreground mb-4">Tell us about yourself</h2>
+            <p className="text-muted-foreground mb-8">Personalize your AI newsletter experience</p>
             
             <div className="space-y-6">
               <div className="text-left">
-                <label className="block text-white mb-2">Your Name</label>
+                <label className="block text-foreground mb-2">Your Name</label>
                 <Input
                   type="text"
                   placeholder="John Doe"
                   value={formData.name}
                   onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                  className="bg-gray-900/50 border-gray-700 text-white h-12 rounded-xl"
+                  className="bg-card border-border text-foreground h-12 rounded-xl"
                 />
               </div>
               
               <div className="text-left">
-                <label className="block text-white mb-2">Topic of Interest</label>
+                <label className="block text-foreground mb-2">Topic of Interest</label>
                 <Input
                   type="text"
                   placeholder="e.g., Technology, Finance, AI"
                   value={formData.topic}
                   onChange={(e) => setFormData(prev => ({ ...prev, topic: e.target.value }))}
-                  className="bg-gray-900/50 border-gray-700 text-white h-12 rounded-xl"
+                  className="bg-card border-border text-foreground h-12 rounded-xl"
                 />
               </div>
               
               <div className="text-left">
-                <label className="block text-white mb-2">Keywords</label>
+                <label className="block text-foreground mb-2">Keywords</label>
                 <Input
                   type="text"
                   placeholder="Add keywords (press Enter to add)"
-                  className="bg-gray-900/50 border-gray-700 text-white h-12 rounded-xl"
+                  className="bg-card border-border text-foreground h-12 rounded-xl"
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {
                       const target = e.target as HTMLInputElement;
@@ -221,7 +219,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
                   {formData.keywords.map((keyword, index) => (
                     <span 
                       key={index}
-                      className="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm flex items-center gap-2"
+                      className="bg-[#CBE491]/20 text-[#CBE491] px-3 py-1 rounded-full text-sm flex items-center gap-2"
                     >
                       {keyword}
                       <button onClick={() => handleRemoveKeyword(keyword)}>
@@ -237,7 +235,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
               <Button 
                 variant="outline" 
                 onClick={handleStepBack}
-                className="flex-1 h-12 rounded-xl bg-gray-800 border-gray-700 text-white hover:bg-gray-700"
+                className="flex-1 h-12 rounded-xl bg-card border-border text-foreground hover:bg-accent"
               >
                 <ArrowLeft className="mr-2 w-4 h-4" />
                 Back
@@ -245,7 +243,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
               <Button 
                 onClick={handleContinue}
                 disabled={!formData.name || !formData.topic || formData.keywords.length === 0 || isSubmitting}
-                className="flex-1 bg-primary hover:bg-primary/90 h-12 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 bg-[#CBE491] hover:bg-[#CBE491]/90 text-[#0f140a] h-12 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed font-medium"
               >
                 {isSubmitting ? 'Verifying...' : 'Verify'}
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -257,26 +255,26 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
         {/* Step 2: Success */}
         {currentStep === 2 && (
           <div className="max-w-2xl mx-auto animate-scale-in">
-            <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-              <Zap className="w-10 h-10 text-white" />
+            <div className="w-20 h-20 bg-[#CBE491] rounded-full flex items-center justify-center mx-auto mb-6">
+              <Brain className="w-10 h-10 text-[#0f140a]" />
             </div>
-            <h2 className="text-3xl font-bold text-white mb-4">Verification Link Sent!</h2>
-            <p className="text-gray-400 mb-8">
-              We've sent a magic link to <span className="text-primary">{formData.email}</span>. 
+            <h2 className="text-3xl font-bold text-foreground mb-4">Verification Link Sent!</h2>
+            <p className="text-muted-foreground mb-8">
+              We've sent a magic link to <span className="text-[#CBE491]">{formData.email}</span>. 
               Click the link to complete your subscription.
             </p>
             <div className="flex gap-4 justify-center">
               <Button 
                 onClick={() => setCurrentStep(0)}
                 variant="outline"
-                className="bg-gray-800 border-gray-700 text-white hover:bg-gray-700 h-12 px-8 rounded-xl"
+                className="bg-card border-border text-foreground hover:bg-accent h-12 px-8 rounded-xl"
               >
                 Start Over
               </Button>
               <Button 
                 onClick={handleResend}
                 disabled={!canResend}
-                className="bg-primary hover:bg-primary/90 h-12 px-8 rounded-xl disabled:opacity-50"
+                className="bg-[#CBE491] hover:bg-[#CBE491]/90 text-[#0f140a] h-12 px-8 rounded-xl disabled:opacity-50 font-medium"
               >
                 {canResend ? 'Resend Link' : `Resend in ${resendTimer}s`}
               </Button>

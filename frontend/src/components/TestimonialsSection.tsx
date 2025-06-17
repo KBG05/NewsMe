@@ -51,15 +51,15 @@ const TestimonialsSection = () => {
                 ))}
               </div>
               
-              <Quote className="w-8 h-8 text-primary mb-4 opacity-60" />
+              <Quote className="w-8 h-8 text-[#CBE491] mb-4 opacity-60" />
               
               <p className="text-gray-300 mb-6 leading-relaxed">
                 "{testimonial.content}"
               </p>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold text-sm">{testimonial.avatar}</span>
+                <div className="w-12 h-12 bg-[#CBE491] rounded-full flex items-center justify-center mr-4">
+                  <span className="text-[#0f140a] font-bold text-sm">{testimonial.avatar}</span>
                 </div>
                 <div>
                   <div className="text-white font-semibold">{testimonial.name}</div>
@@ -73,22 +73,22 @@ const TestimonialsSection = () => {
         {/* Stats Section - Updated with new data */}
         <div className="grid md:grid-cols-4 gap-8 scroll-trigger">
           <div className="text-center">
-            <div className="text-6xl font-bold text-primary mb-2">300K+</div>
+            <div className="text-6xl font-bold text-[#CBE491] mb-2">300K+</div>
             <div className="text-lg font-semibold text-white mb-1">Daily Readers</div>
             <div className="text-gray-400 text-sm">Professionals trust NewsMe</div>
           </div>
           <div className="text-center">
-            <div className="text-6xl font-bold text-primary mb-2">200+</div>
+            <div className="text-6xl font-bold text-[#CBE491] mb-2">200+</div>
             <div className="text-lg font-semibold text-white mb-1">Global Sources</div>
             <div className="text-gray-400 text-sm">Comprehensive coverage</div>
           </div>
           <div className="text-center">
-            <div className="text-6xl font-bold text-primary mb-2">95%</div>
+            <div className="text-6xl font-bold text-[#CBE491] mb-2">95%</div>
             <div className="text-lg font-semibold text-white mb-1">Time Saved</div>
             <div className="text-gray-400 text-sm">Compared to traditional news</div>
           </div>
           <div className="text-center">
-            <div className="text-6xl font-bold text-primary mb-2">5 min</div>
+            <div className="text-6xl font-bold text-[#CBE491] mb-2">5 min</div>
             <div className="text-lg font-semibold text-white mb-1">Daily Read</div>
             <div className="text-gray-400 text-sm">Perfect for busy schedules</div>
           </div>

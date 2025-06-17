@@ -4,26 +4,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Me - AI-Powered Newsletter Platform</title>
+    <title>News Me</title>
     <meta name="description" content="Get personalized insights delivered to your inbox with our AI-powered newsletter platform" />
     <meta name="author" content="News Me" />
 
-    <!-- Helvetica Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Force Helvetica Neue -->
     <style>
+      /* Try to load Helvetica Neue locally first */
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: local('Helvetica Neue Light'), local('HelveticaNeue-Light'),
+             local('Helvetica Neue'), local('HelveticaNeue'),
+             local('Helvetica'), local('Arial');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: local('Helvetica Neue'), local('HelveticaNeue'),
+             local('Helvetica'), local('Arial');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: local('Helvetica Neue Medium'), local('HelveticaNeue-Medium'),
+             local('Helvetica Neue'), local('HelveticaNeue'),
+             local('Helvetica'), local('Arial');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: local('Helvetica Neue Bold'), local('HelveticaNeue-Bold'),
+             local('Helvetica Bold'), local('Helvetica-Bold'),
+             local('Arial Bold'), local('Arial-Bold');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      /* Default font stack - Helvetica first */
+      * {
+        font-family: 'Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+      }
+      
       body {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
       }
     </style>
 
     <meta property="og:title" content="News Me - AI-Powered Newsletter Platform" />
     <meta property="og:description" content="Get personalized insights delivered to your inbox with our AI-powered newsletter platform" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content= />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
 
   <body>
