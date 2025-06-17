@@ -32,7 +32,7 @@ const FeaturesSection = () => {
   return (
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 scroll-trigger dual-text">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 scroll-trigger dual-text">
           Why Choose NewsMe?
         </h2>
 
@@ -56,7 +56,7 @@ const FeaturesSection = () => {
         <div className="flex justify-center space-x-12 md:space-x-24 scroll-trigger">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
+              <div className="text-2xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
               <div className="text-gray-400 text-sm uppercase tracking-wider">{stat.label}</div>
             </div>
           ))}

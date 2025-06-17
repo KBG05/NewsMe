@@ -122,19 +122,19 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-8xl md:text-9xl font-medium mb-14 animate-fade-up dual-text">
+        <h1 className="text-7xl md:text-9xl font-medium mb-14 animate-fade-up dual-text">
           NewsMe
         </h1>
 
         {/* Tagline */}
         <div className="mb-12 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-          <h2 className="text-3xl md:text-2xl font-thin text-foreground mb-8">
+          <h2 className="text-2xl md:text-3xl font-thin text-foreground mb-8">
             News that matters, 
             <span className="font-normal"> insights that inspires.</span> 
             {/* <span className="text-[#CBE491]">NewsMe</span> */}
           </h2>
-          <p className="text-xl text-[#CBE491] font-thin mb-2">5 minutes weekly, Infinite clarity.</p>
-          <p className="text-xl text-foreground"></p>
+          <p className="text-lg text-[#CBE491] font-thin mb-2">5 minutes weekly, Infinite clarity.</p>
+          <p className="text-lg  text-foreground"></p>
         </div>
 
         {/* Progress Dots */}
@@ -151,7 +151,7 @@ const HeroSection = ({ currentStep, setCurrentStep }: HeroSectionProps) => {
 
         {/* Step 0: Email Input */}
         {currentStep === 0 && (
-          <div className="max-w-md mx-auto animate-fade-up" style={{ animationDelay: '0.6s' }}>
+          <div className="max-w-md mx-auto animate-fade-up " style={{ animationDelay: '0.6s' }}>
             <div className="flex flex-col sm:flex-row gap-4">
               <Input
                 type="email"
