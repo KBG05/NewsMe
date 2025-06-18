@@ -1,5 +1,7 @@
 # NewsMe
-.[Live Website:](https://newsmeai.xyz)
+[Live Website:](https://newsmeai.xyz)
+
+---
 <!-- 
   Add a project logo, screenshot, or animation here.
   Example: 
@@ -135,7 +137,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-Created by [KBG05](https://github.com/KBG05) .[Siddartha A Y](https://github.com/SiddarthAA)
+Created by:
+[KBG05](https://github.com/KBG05)
+[Siddartha A Y](https://github.com/SiddarthAA)
 
 <!--
   Add your logo or a screenshot above to showcase the app!
