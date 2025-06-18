@@ -9,6 +9,7 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 from fastapi.middleware.cors import CORSMiddleware
 
+
 limiter = Limiter(key_func=get_remote_address)
 
 app= FastAPI()

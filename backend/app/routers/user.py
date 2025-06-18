@@ -12,6 +12,7 @@ from supabase import Client
 from config import REDIRECT_URL, FRONTEND_URL
 from slowapi import Limiter
 from slowapi.util import get_remote_address
+from app.profanity import profanity_check
 
 router=APIRouter(tags=["user"])
 
@@ -21,9 +22,13 @@ limiter = Limiter(key_func=get_remote_address)
 @limiter.limit("3/minute")
 def create_user(request:Request, user:Annotated[UserCreate, Body(embed=False)], supabase:Annotated[Client, Depends(get_supabase_client)], session:Session=Depends(get_session), ):
     try:
-        existing=get_user(user.email, session=session)
-        if existing:
+        
+        if not profanity_check(user=user):
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="please enter valid topic or keywords")
+        
+        if get_user(user.email, session=session):
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="user already registered")
+        
         response=supabase.auth.sign_in_with_otp({
             "email":user.email,
             "options":{
@@ -37,7 +42,7 @@ def create_user(request:Request, user:Annotated[UserCreate, Body(embed=False)], 
             }
         })
         
-        if response.user==None or (not existing)  :
+        if response.user==None :
             return UserResponseMessage(msg="Magic Link Sent Successfully")
         else:
             raise HTTPException(status_code=response.status, detail="user already registered")
