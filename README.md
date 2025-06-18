@@ -1,5 +1,5 @@
 # NewsMe
-
+.[Live Website:](https://newsmeai.xyz)
 <!-- 
   Add a project logo, screenshot, or animation here.
   Example: 
@@ -31,6 +31,7 @@
 - **Worker/API Layer:** Node.js 20
 - **Authentication & Database:** Supabase (Auth) + PostgreSQL
 - **ORM:** SQLAlchemy
+- **Tools:** Alembic (Migrations), TailwindCss
 
 ---
 
@@ -66,7 +67,7 @@ npm run dev
 ```bash
 cd backend     # Replace with actual backend directory if different
 pip install -r requirements.txt
-uvicorn main:app --reload
+uvicorn app.main:app --reload
 ```
 
 ---
@@ -86,7 +87,8 @@ SUPABASE_API_KEY=your_supabase_api_key
 DATABASE_URL=postgresql+psycopg2://user:password@localhost:5432/newsme
 
 # Allowed frontend origins (comma-separated for CORS)
-FRONTEND_URLS=http://localhost:5173,https://your-production-frontend.com
+FRONTEND_URL=http://localhost:5173,
+FRONTEND_URL_2=https://your-production-frontend.com
 
 # Any other environment variables
 SECRET_KEY=your_secret_key
@@ -97,27 +99,11 @@ SECRET_KEY=your_secret_key
 Create a `.env` file in your frontend directory:
 
 ```
-VITE_BACKEND_URL=http://localhost:8000
+BACKEND_URL=http://localhost:8000
 # Add other environment variables as needed
 ```
 
 ---
-
-## Project Structure
-
-```plaintext
-/
-├── frontend/   # Vite + React + TypeScript app
-│   └── ...
-├── backend/    # FastAPI app
-│   └── ...
-├── worker/     # Node.js logic, if applicable
-│   └── ...
-├── db/         # migrations, seeds, etc.
-│   └── ...
-├── README.md
-└── ...
-```
 
 ---
 
@@ -149,7 +135,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-Created by [KBG05](https://github.com/KBG05)
+Created by [KBG05](https://github.com/KBG05) .[Siddartha A Y](https://github.com/SiddarthAA)
 
 <!--
   Add your logo or a screenshot above to showcase the app!
