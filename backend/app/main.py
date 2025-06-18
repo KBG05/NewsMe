@@ -1,8 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from app.routers import user
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
+from config import FRONTEND_URL_2, FRONTEND_URL, FRONTEND_URL_3
 from fastapi import FastAPI, Request
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
@@ -15,9 +14,13 @@ limiter = Limiter(key_func=get_remote_address)
 app= FastAPI()
 
 origins = [
-    "http://localhost:8080",
-    "https://localhost:8080",  # If you use HTTPS locally
-    "http://127.0.0.1:8080",   # Alternative localhost format
+    # "http://localhost:8080",
+    # "https://localhost:8080",
+    # "http://127.0.0.1:8080",
+    FRONTEND_URL,              # Main frontend URL
+    FRONTEND_URL_2,            # Additional frontend URL
+    FRONTEND_URL_3,            # Another additional frontend URL
+    
 ]
 
 app.add_middleware(
