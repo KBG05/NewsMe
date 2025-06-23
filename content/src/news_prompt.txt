@@ -27,6 +27,7 @@ Each news article should be returned in the following **structured JSON format**
   "tags": ["<tag1>", "<tag2>", ...],
   "source": "<News publication name>",
   "link": "<URL or reference to the full news article>"
+  "type": "General Coverage/Personalized Coverage/Trending & Viral"
 }
 
 Make sure:

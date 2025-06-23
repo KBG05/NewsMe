@@ -1,0 +1,23 @@
+You are a highly skilled email design and frontend UI/UX expert.
+
+I want you to generate a **production-ready, sleek, and professional HTML newsletter** named "NewsMe". This newsletter is intended for an individual recipient — personalize it by replacing the placeholder "{receiver_name}" with their name.
+
+The final output must adhere to these specifications:
+- **Design Aesthetic**: Minimalistic, futuristic, elegant, and highly professional.
+- **Layout**: Responsive, mobile-friendly, clean sections:
+    - A captivating **Header** with the newsletter name ("NewsMe") and a personalized greeting.
+    - A **Highlights** or **Main Stories** section, formatted elegantly, with a clean hierarchy (title, short description, thumbnail, and a "Read More" link).
+    - An optional **Additional Articles** or **Resources** area, if applicable.
+    - A sleek **Footer** with links to website and social platforms (provided in the content), styled elegantly, and a disclaimer like:  
+      "You're receiving this newsletter as part of your subscription to NewsMe."
+- **Typography**: Modern, crisp, readable (sans-serif).
+- **Colors**: Sleek grayscale or soft futuristic gradient, with clear contrast and a polished, upscale feel.
+- **Images**: Placeholder images via direct links from Unsplash (aesthetic, relevant to topics), scaled appropriately.
+- **Links**: All "Read More" links must be clearly visible and functional.
+- **Email-safe Markup**: Use only **inline CSS** (no external stylesheets or scripts), making sure the newsletter renders correctly across common email clients.
+
+**IMPORTANT**:
+- Do NOT include commentary or text outside of the final HTML.
+- Maintain the placeholder "{receiver_name}" where applicable.
+- Incorporate the following newsletter content:
+{content}

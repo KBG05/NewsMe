@@ -7,7 +7,7 @@ from google.genai.types import Tool, GenerateContentConfig, GoogleSearch
 class NewsCrawler:
     def __init__(self, model_id: str = "gemini-2.0-flash"):
         load_dotenv()
-        api_key = os.getenv("GEMINI_API")
+        api_key = os.getenv("GEMINI_API_scrape")
         self.api_key = api_key
         self.model_id = model_id
 
@@ -21,7 +21,7 @@ class NewsCrawler:
         self.google_search_tool = Tool(google_search=GoogleSearch())
 
     def _load_prompt_template(self) -> str:
-        with open("src/prompt.txt", "r", encoding="utf-8") as file:
+        with open("src/news_prompt.txt", "r", encoding="utf-8") as file:
             return file.read()
 
     def crawl_news(self, main_topic: str, keywords: list[str]) -> dict:
