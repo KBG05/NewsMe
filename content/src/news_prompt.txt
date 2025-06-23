@@ -1,0 +1,38 @@
+I want to generate a weekly news digest for a newsletter. Please fetch and summarize the most important news stories from the past 7 days using the structure below:
+
+MAIN TOPIC: "{MAIN_TOPIC}"  
+PERSONALIZED KEYWORDS: [{KEYWORDS}]  
+
+Please follow this structure and **limit the total number of articles to 10**, making sure the sources are diverse and reputable:
+
+1. 50% General Coverage (5 articles):
+   - Broad, important events or updates related to the main topic "{MAIN_TOPIC}".
+   - Avoid focusing on user-specified keywords in this section.
+
+2. 30% Personalized Coverage (3 articles):
+   - Stories that closely match one or more of these user keywords: [{KEYWORDS}]
+   - These stories should reflect high relevance to the keywords and provide depth or regional spread.
+
+3. 20% Trending & Viral (2 articles):
+   - The most widely discussed or viral stories related to "{MAIN_TOPIC}".
+   - Focus on highly shared or debated headlines from the past week.
+
+Each news article should be returned in the following **structured JSON format**:
+
+{
+  "headline": "<Concise, engaging news headline>",
+  "summary": "<50–75 word summary of the article>",
+  "date": "<Date of the event or publication in YYYY-MM-DD format>",
+  "location": "<City, State or Country (if applicable)>",
+  "tags": ["<tag1>", "<tag2>", ...],
+  "source": "<News publication name>",
+  "link": "<URL or reference to the full news article>"
+  "type": "General Coverage/Personalized Coverage/Trending & Viral"
+}
+
+Make sure:
+- Articles are selected from **diverse, credible sources** (limit one article per source, if possible).
+- Get news articles from ALL the above coverages.
+- Avoid duplicates or overly similar stories.
+- Language is neutral, factual, and easy to read.
+- return ONLY the json object and NOTHING else (NO EXTRA TEXT/POINTS).
