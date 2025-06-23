@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+
+/* Yellow Green Theme Variables */
+:root {
+  --background: 15 20 10;
+  --foreground: 203 228 145;
+  --card: 15 20 10;
+  --card-foreground: 203 228 145;
+  --popover: 15 20 10;
+  --popover-foreground: 203 228 145;
+  --primary: 203 228 145;
+  --primary-foreground: 15 20 10;
+  --secondary: 25 30 15;
+  --secondary-foreground: 203 228 145;
+  --muted: 25 30 15;
+  --muted-foreground: 180 200 120;
+  --accent: 25 30 15;
+  --accent-foreground: 203 228 145;
+  --destructive: 220 38 38;
+  --destructive-foreground: 203 228 145;
+  --border: 25 30 15;
+  --input: 25 30 15;
+  --ring: 203 228 145;
+  --theme-bg: radial-gradient(ellipse at center, #0a0f05 0%, #0f140a 25%, #191e0f 50%, #0a0f05 100%);
+  --theme-primary: rgb(203, 228, 145);
+  --theme-primary-light: rgba(203, 228, 145, 0.8);
+  --theme-primary-dark: rgba(203, 228, 145, 0.6);
+  --theme-secondary: rgb(203, 228, 145);
+  --theme-accent: rgba(203, 228, 145, 0.2);
+  --theme-bg-card: rgba(25, 30, 15, 0.4);
+  --theme-bg-muted: rgba(25, 30, 15, 0.6);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: "Instrument Serif", serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+  }
+
+  body {
+    @apply text-foreground;
+    background: var(--theme-bg);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    font-family: "Instrument Serif", serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+  }
+}
+
+/* Theme-aware animated background elements */
+.space-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(1px 1px at 20px 30px, var(--theme-primary-light), transparent),
+    radial-gradient(1px 1px at 40px 70px, var(--theme-primary-dark), transparent),
+    radial-gradient(1px 1px at 90px 40px, var(--theme-primary-light), transparent),
+    radial-gradient(1px 1px at 130px 80px, var(--theme-primary-dark), transparent),
+    radial-gradient(1px 1px at 160px 30px, var(--theme-accent), transparent),
+    radial-gradient(2px 2px at 200px 50px, var(--theme-primary-light), transparent),
+    radial-gradient(1px 1px at 250px 100px, var(--theme-primary-dark), transparent);
+  background-size: 400px 200px;
+  animation: float 25s ease-in-out infinite, drift 30s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Theme-aware shooting stars and horizontal lines */
+.lines-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.lines-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, var(--theme-primary-light) 0%, transparent 15%, transparent 85%, var(--theme-primary-light) 100%),
+    linear-gradient(90deg, var(--theme-primary-dark) 0%, transparent 20%, transparent 80%, var(--theme-primary-dark) 100%),
+    linear-gradient(90deg, var(--theme-accent) 0%, transparent 25%, transparent 75%, var(--theme-accent) 100%);
+  background-size: 80px 1px, 120px 1px, 150px 1px;
+  background-position: 0 15%, 0 35%, 0 55%, 0 75%;
+  background-repeat: repeat-x;
+  animation: horizontal-drift 12s linear infinite, pulse-lines 2s ease-in-out infinite;
+}
+
+.lines-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse 60px 1px at 10% 20%, var(--theme-primary), transparent),
+    radial-gradient(ellipse 40px 1px at 80% 40%, var(--theme-primary-dark), transparent),
+    radial-gradient(ellipse 80px 1px at 30% 70%, var(--theme-primary-light), transparent),
+    radial-gradient(ellipse 30px 1px at 90% 10%, var(--theme-primary-dark), transparent),
+    radial-gradient(ellipse 50px 1px at 60% 90%, var(--theme-accent), transparent);
+  animation: shooting-stars 15s linear infinite;
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(0.5deg); }
+  50% { transform: translateY(-3px) rotate(-0.3deg); }
+  75% { transform: translateY(-15px) rotate(0.8deg); }
+}
+
+@keyframes drift {
+  0% { transform: translateX(0px); }
+  100% { transform: translateX(-30px); }
+}
+
+@keyframes horizontal-drift {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(200px); }
+}
+
+@keyframes pulse-lines {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes shooting-stars {
+  0% { transform: translateX(-300%) rotate(0deg); }
+  100% { transform: translateX(300%) rotate(360deg); }
+}
+
+@keyframes scroll-loop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation utilities */
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+}
+
+.animate-scroll-loop {
+  animation: scroll-loop 30s linear infinite;
+}
+
+/* Enhanced dual color text */
+.dual-text {
+  background: linear-gradient(45deg, var(--theme-primary) 30%, var(--theme-secondary) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Enhanced glassmorphism effect */
+.glass-card {
+  background: var(--theme-bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--theme-accent);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Topic badge styles */
+.topic-badge {
+  background: var(--theme-accent);
+  border: 1px solid var(--theme-primary-dark);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.topic-badge:hover {
+  background: var(--theme-bg-card);
+  border-color: var(--theme-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--theme-accent);
+}
+
+/* Scroll triggered animations */
+.scroll-trigger {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-trigger.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
