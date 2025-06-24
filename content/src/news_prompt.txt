@@ -26,7 +26,7 @@ Each news article should be returned in the following **structured JSON format**
   "location": "<City, State or Country (if applicable)>",
   "tags": ["<tag1>", "<tag2>", ...],
   "source": "<News publication name>",
-  "link": "<URL or reference to the full news article>"
+  "link": "<Provide the direct link to the source article (e.g. Hindustan Times URL) and not a VertexAI redirect or grounding API link.>"
   "type": "General Coverage/Personalized Coverage/Trending & Viral"
 }
 
@@ -35,4 +35,4 @@ Make sure:
 - Get news articles from ALL the above coverages.
 - Avoid duplicates or overly similar stories.
 - Language is neutral, factual, and easy to read.
-- return ONLY the json object and NOTHING else (NO EXTRA TEXT/POINTS).
+- return ONLY the json object and NOTHING else, DONT include any EXTRA POINTS before or after the json object.

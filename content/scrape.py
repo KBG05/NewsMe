@@ -42,7 +42,11 @@ class NewsCrawler:
         for each in response.candidates[0].content.parts:
             raw_output += each.text
         
-        return raw_output
+        start_index = raw_output.find('json')
+        if start_index != -1:
+            json_output = raw_output[start_index + 4 : -3]
+
+        return json_output
 
     def placeholder_function(self): 
         pass
